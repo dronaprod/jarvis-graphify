@@ -8,12 +8,12 @@
 
 **macOS / Linux:**
 ```bash
-curl -fsSL https://raw.githubusercontent.com/dronaprod/jarvis-graphify/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/drona-jarvis-org/jarvis-graphify-releases/main/install.sh | bash
 ```
 
 **Windows (PowerShell):**
 ```powershell
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/dronaprod/jarvis-graphify/main/install.ps1" -OutFile install.ps1; .\install.ps1
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/drona-jarvis-org/jarvis-graphify-releases/main/install.ps1" -OutFile install.ps1; .\install.ps1
 ```
 
 After install, restart your terminal then verify:
@@ -58,7 +58,7 @@ Plus:
 ### 1 · Install
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/dronaprod/jarvis-graphify/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/drona-jarvis-org/jarvis-graphify-releases/main/install.sh | bash
 source ~/.zshrc
 ```
 

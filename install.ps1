@@ -2,7 +2,7 @@
 # jarvis-graphify installer — Windows (PowerShell)
 #
 # One-liner install (downloads wheel from GitHub Releases):
-#   Invoke-WebRequest -Uri "https://raw.githubusercontent.com/dronaprod/jarvis_graphify/main/release/install.ps1" -OutFile install.ps1; .\install.ps1
+#   Invoke-WebRequest -Uri "https://raw.githubusercontent.com/drona-jarvis-org/jarvis_graphify/main/release/install.ps1" -OutFile install.ps1; .\install.ps1
 #
 # From a cloned / unzipped release folder:
 #   .\install.ps1                     # user install (no admin needed)
@@ -19,7 +19,7 @@ $ScriptDir  = Split-Path -Parent $MyInvocation.MyCommand.Path
 $VenvDir    = "$env:USERPROFILE\.jarvis-graphify\venv"
 $UserBin    = "$env:USERPROFILE\.local\bin"
 $GlobalBin  = "C:\Program Files\jarvis-graphify"
-$ReleaseUrl = "https://github.com/dronaprod/jarvis_graphify/releases/download/v${Version}/jarvis_graphify-${Version}-py3-none-any.whl"
+$ReleaseUrl = "https://github.com/drona-jarvis-org/jarvis_graphify/releases/download/v${Version}/jarvis_graphify-${Version}-py3-none-any.whl"
 
 function Write-Step($msg) { Write-Host "[jarvis-graphify] $msg" -ForegroundColor Green }
 function Write-Warn($msg) { Write-Host "[warning] $msg" -ForegroundColor Yellow }
@@ -69,7 +69,7 @@ if (-not $WheelPath) {
         Invoke-WebRequest -Uri $ReleaseUrl -OutFile $TmpWhl -UseBasicParsing -ErrorAction Stop
         $WheelPath = $TmpWhl
     } catch {
-        Write-Err "Download failed: $_`nVisit https://github.com/dronaprod/jarvis_graphify/releases"
+        Write-Err "Download failed: $_`nVisit https://github.com/drona-jarvis-org/jarvis_graphify/releases"
     }
 }
 
@@ -119,5 +119,5 @@ Write-Host "    4. Edit the config:        notepad jarvis-graphify-in\settings.j
 Write-Host "    5. Run the scan:           jarvis-graphify ."
 Write-Host "    6. Open the graph:         start jarvis-graphify-out\graph.html"
 Write-Host ""
-Write-Host "  Docs & source:  https://github.com/dronaprod/jarvis_graphify" -ForegroundColor Cyan
+Write-Host "  Docs & source:  https://github.com/drona-jarvis-org/jarvis_graphify" -ForegroundColor Cyan
 Write-Host ""
