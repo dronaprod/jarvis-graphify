@@ -36,7 +36,10 @@ case "$OS" in
     Darwin)
         case "$ARCH" in
             arm64)  BINARY="jarvis-graphify-macos-arm64" ;;
-            x86_64) BINARY="jarvis-graphify-macos-x86_64" ;;
+            x86_64)
+                warn "Intel Mac detected. No native x86_64 binary is available."
+                warn "Install via pip instead:  pip install jarvis-graphify"
+                exit 1 ;;
             *)      error "Unsupported macOS architecture: $ARCH" ;;
         esac ;;
     Linux)
